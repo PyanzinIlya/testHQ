@@ -1,7 +1,10 @@
-from django.urls import path
+from rest_framework import routers
 
-from . import views
+from polls.views import UserViewSet, ProductViewSet, LessonViewSet, ProductAccessViewSet
 
-urlpatterns = [
-    path("", views.index, name="index"),
-]
+router = routers.SimpleRouter()
+router.register(r'users', UserViewSet, basename='user')
+router.register(r'products', ProductViewSet, basename='product')
+router.register(r'lessons', LessonViewSet, basename='lesson')
+router.register(r'user-product-access', ProductAccessViewSet, basename='user-product-access')
+urlpatterns = router.urls
