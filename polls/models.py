@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.utils import timezone
 
 
 class User(AbstractUser):
@@ -18,11 +19,16 @@ class Lesson(models.Model):
     video_duration = models.IntegerField(default=1, help_text="duration in seconds")
 
 
-class LessonProgress(models.Model):
-    user = models.ForeignKey("polls.User", on_delete=models.CASCADE, null=False, related_name="lessons")
-    lesson = models.ForeignKey("polls.Lesson", on_delete=models.CASCADE, null=False, related_name="users_progress")
+class Timezone:
+    pass
+
+
+class UserLessonProgress(models.Model):
+    user = models.OneToOneField("polls.User", on_delete=models.CASCADE, null=False, related_name="lesson")
+    lesson = models.OneToOneField("polls.Lesson", on_delete=models.CASCADE, null=False, related_name="user_progress")
     time_viewed = models.IntegerField(help_text="duration in seconds")
-    lesson_status = models.BooleanField(default=False)
+    lesson_completed = models.BooleanField(default=False)
+    last_time_viewed = models.DateTimeField(auto_now=True)
 
 
 class ProductAccess(models.Model):

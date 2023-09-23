@@ -20,11 +20,18 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="3063409e-2438-4b19-81a9-7d042b187048" object-ref="schemas/db/tables/polls_productaccess" />
+      <object connection-id="3063409e-2438-4b19-81a9-7d042b187048" object-ref="schemas/db/tables/polls_product" />
+      <object connection-id="3063409e-2438-4b19-81a9-7d042b187048" object-ref="schemas/db/tables/polls_user" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="3063409e-2438-4b19-81a9-7d042b187048" dataset="db.polls_productaccess" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3063409e-2438-4b19-81a9-7d042b187048" dataset="db.polls_user" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3063409e-2438-4b19-81a9-7d042b187048" dataset="db.auth_group" active-filter-id="" />
+    <filter-actions connection-id="3063409e-2438-4b19-81a9-7d042b187048" dataset="db.polls_product" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="3063409e-2438-4b19-81a9-7d042b187048" dataset="db.django_session" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="3063409e-2438-4b19-81a9-7d042b187048" dataset="db.polls_product_lessons" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
